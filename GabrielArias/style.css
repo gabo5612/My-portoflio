@@ -378,7 +378,7 @@ nav ul li a:hover{
 footer{
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 81vh;
     background-image: url("/GabrielArias/assets/World\ Map.svg");
     background-repeat: no-repeat;
     background-size: cover;
