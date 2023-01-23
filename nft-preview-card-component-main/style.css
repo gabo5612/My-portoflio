@@ -1,5 +1,5 @@
  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
-/*font-family: 'Outfit', sans-serif;*/
+/**/
 :root{
     --Softblue: hsl(215, 51%, 70%);
     --Cyan: hsl(178, 100%, 50%);
@@ -13,6 +13,7 @@
     padding: 0;    
 }
 body{
+    font-family: 'Outfit', sans-serif;
     background-color: var(--Verydarkbluemain);
     display: flex;
     align-items: center;
@@ -35,46 +36,92 @@ body{
     align-items: center;
     justify-content: flex-start;
     height: 269px;
-    margin: 22px;
+    margin: 22px 22px 0 22px;
     
 }
 
 .img1{
-    width: 274px;
+    width: 285px;
     height: 264px;
     border-radius: 12px;
-    cursor: pointer;  
-}
-.img1:hover{
-
-    background-color: var(--Cyan);
-  
+    cursor: pointer; 
+    
 }
 
 .imgd2{
-    display: none;
+    
     position: absolute;
     border-radius: 12px;
-    width: 274px;
+    width: 285px;
     height: 264px;
     background-color: var(--Cyan);
+    top:156px;
+    filter: opacity(0.5);
 }
-/*
-.img1{
+
+.icon-img2{
     position: absolute;
-    z-index: 1;
+    top: 32vh;
+    right: 45vw;
 }
-.img2{
-    display: none;
-    z-index: 2;
-    position: absolute;
-    top: 28vh;
-}
-*/
+
 .content2{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: flex-start;
     height: 300px;
+    margin: 0 20px;
+    justify-content: space-around;
+}
+.content2 a{
+    text-decoration: none;
+    text-align: left;
+    color: var(--Cyan);
+}
+.content2 a h1{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.content2 p{
+    color: var(--Softblue);
+    font-weight: 300;
+}
+.prices{
+    display: flex;
+    margin: 27px 0;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--Verydarkblueline);
+    font-size: 13px;
+}
+.prices span{
+    display: flex;
+}
+.prices span:first-child{
+    color: var(--Cyan);
+}
+.prices span:last-child{
+    color: var(--Softblue);
+}
+.prices span img{
+    margin-right: 4px;
+    
+}
+.botton{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -20px;
+    margin-bottom: 25px;
+}
+.img-avatar{
+    width: 30px;
+    border: 1px solid;
+    border-radius: 100%;
+    color: var(--White);
+}
+.inactive{
+    display: none;
 }
