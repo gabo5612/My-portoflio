@@ -35,5 +35,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   font-family: 'Poppins', sans-serif;
-    
+  color: var(--DarkModeText);
+  background-color: var(--DarkModeBackground);
 }
