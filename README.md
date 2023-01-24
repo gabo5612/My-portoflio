@@ -5,8 +5,6 @@ Fork on GitHub3489
 <h1 align="center">Hi 👋, I'm Gabriel Arias</h1>
 <h3 align="center">A passionate frontend developer from Venezuela</h3>
 
-- 🔭 I’m currently working on [Agencia Next Level](www.agencianextlevel.com)
-
 - 🌱 I’m currently learning **React**
 
 - 💬 Ask me about **HTML, CSS, Javascript**
