@@ -10,6 +10,7 @@ html{
     font-family: "Dosis", sans-serif;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 header {
     background-color: #6E07F3;
