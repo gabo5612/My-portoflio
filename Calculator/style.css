@@ -66,16 +66,34 @@ body {
     background-color: #57484895;
     border-radius: 100%;
     font-size: 2em;
+    cursor: pointer;
 }
 .utilities{
     background-color:  #7c7c7c ;
     color: #141414;
+    transition-delay: 50ms;
+    transition-duration: 0.8s;
+}
+.utilities:hover{
+    background-color: #d9d9d9;
 }
 .symbols{
     background-color:   #f89d0f;
+    transition-delay: 50ms;
+    transition-duration: 0.8s;
 }
+.symbols:hover{
+  
+    background-color: #fcc78c;
+}
+
 .numbers{
-    background-color:  #343434  ;
+    background-color:  #343434;
+    transition-delay: 50ms;
+    transition-duration: 0.8s;
+}
+.numbers:hover{
+    background-color: #737373;
 }
 #zero{
     grid-column-end: span 2;
@@ -87,4 +105,9 @@ body {
 #valor{
     font-size: 1.2em;
     font-weight: 500;
+}
+@media (min-width:680px) {
+    .screen{
+        width: 58vw;
+    }
 }
