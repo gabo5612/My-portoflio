@@ -110,3 +110,29 @@ Use this section to outline areas that you want to continue focusing on in futur
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+
+
+const cinco=document.querySelector('.cinco').onclick=function(){
+    this.classList.add('activo');
+    if(cinco.classList.contain('activo')){
+        diez.classList.remove('activo');
+    }
+    
+}
+const diez=document.querySelector('.diez').onclick=function(){
+    this.classList.add('activo');
+    if(diez.classList.contain('activo')){
+        console.log('si se activa la condicional');
+        cinco.classList.remove('activo');
+    }
+    cinco.classList.remove('activo');
+}
+const quince=document.querySelector('.quince').onclick=function(){
+    this.classList.add('activo');
+}
+const ticinco=document.querySelector('.ticinco').onclick=function(){
+    this.classList.add('activo');
+}
+const cincuenta=document.querySelector('.cincuenta').onclick=function(){
+    this.classList.add('activo');
+}
