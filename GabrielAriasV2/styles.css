@@ -48,6 +48,7 @@ header{
 nav{
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 nav ul{
   list-style: none;
@@ -236,7 +237,9 @@ footer{
 .form button:hover{
   background-color: rgba(240, 248, 255, 0.238);
 }
-
+#paltext{
+  font-size: 0.8em;
+}
 
 .inactive{
   display: none;
