@@ -286,7 +286,19 @@ footer{
     height: 400px;
     width: 400px;
   }
+  .proyect3, .proyect4{
+    grid-row: span 2;
+    
+  }
+
+
   .proyect-container{
     grid-template-columns: repeat(auto-fill, 400px);
+  }
+}
+@media (min-width:1400px){
+  .proyect3 img, .proyect4 img{
+    height: 850px;
+    object-fit: fill;
   }
 }
