@@ -118,13 +118,13 @@ function resultadoTotal(){
         var totalForPerson=0;
         var totalTipForPerson=0;
         totalTipForPerson=billResult*csTip;
-        console.log(typeof csTip);
+       
         totalTipForPerson=(totalTipForPerson/peopleResult).toFixed(2);
         totalForPerson=billResult*csTip;
         totalForPerson=+billResult+totalForPerson;
         totalForPerson/=peopleResult;
         totalForPerson=totalForPerson.toFixed(2);
-        console.log('si se activa esta segunda condicional');
+        
         tipResult.innerText='$'+totalTipForPerson;
         totalAmount.innerText='$ '+totalForPerson;
       

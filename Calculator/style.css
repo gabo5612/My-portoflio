@@ -65,7 +65,7 @@ body {
     height: 75px;
     background-color: #57484895;
     border-radius: 100%;
-    font-size: 2em;
+    font-size: 1.4em;
     cursor: pointer;
 }
 .utilities{
@@ -79,8 +79,8 @@ body {
 }
 .symbols{
     background-color:   #f89d0f;
-    transition-delay: 50ms;
-    transition-duration: 0.8s;
+    transition-delay: 20ms;
+    transition-duration: 0.5s;
 }
 .symbols:hover{
   
@@ -97,14 +97,18 @@ body {
 }
 #zero{
     grid-column-end: span 2;
-    width: 133px;
+    width: 163px;
     border-radius: 50px;
     justify-content: flex-start;
-    padding-left: 29px;
+   
 }
 #valor{
     font-size: 1.2em;
     font-weight: 500;
+}
+.active{
+    background-color: #ffffff;
+    color: #f6a20b; 
 }
 @media (min-width:680px) {
     .screen{
