@@ -81,7 +81,8 @@ body {
     transition-delay: 50ms;
     transition-duration: 0.8s;
     font-size: 1.6em;
-    font-weight: bold;
+    
+   
 }
 .utilities:hover{
     background-color: #d9d9d9;
