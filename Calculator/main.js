@@ -1,15 +1,11 @@
 /* 
-    -hacer la accion correspondiente dependiendo el boton 
-
-    -cuando se seleccione el boton de algun simbolo se debe poner los numeros en otro campo o pasar los primeros numeros a otro campo para poder compararlos y hacer la operacion matemaatica listo 
-    -Tomar los numeros como string de esa manera  será mas facil agregarlos a la pantalla y luego hacer los calculos matematicos listo 
-     hacer una condicional que se active cuando se presione un simbolo (debe haber una condicion de que el digts>=1)
+    falta poder agregar comas a los digitos 
+    poner que cuando el digito tenga muchos decimales, limitarlo a 4 decimales
     */
 
   
 
 const screenSpan=document.querySelector('#screenSpan');
-
 const  deleter=document.getElementById('delete');
 const  valor=document.getElementById('valor');
 const  percentage=document.getElementById('percentage');
@@ -31,11 +27,13 @@ const  comma=document.getElementById('comma');
 const  equal=document.getElementById('equal');
 var digits=[];
 var digit2=[];
+var digit3=[];
 var symbols=[];
 var resultado=0;
 var val=0; 
 var numb=0;
 var numb2=0;
+
 
 deleter.addEventListener('click',borrador);
 valor.addEventListener('click',operation);
@@ -53,8 +51,8 @@ three.addEventListener('click',catcher);
 
 zero.addEventListener('click',catcher);
 comma.addEventListener('click',catcher); /* no se te olvide lo de la coma*/
-equal.addEventListener('click',operation); /*falta esto*/
-console.log('val '+val+ ' numb '+ numb +' numb2 '+ numb2 + ' resultado '+ resultado );
+equal.addEventListener('click',operation); 
+
 divider.addEventListener('click',function(){
     this.classList.add('active');
     if(this.classList.contains('active')){
@@ -63,7 +61,12 @@ divider.addEventListener('click',function(){
         plus.classList.remove('active');
         symbols.push(1);
     }
-    val=1;
+    if(val==0){
+        val=1;
+    }
+    else {
+        val=2;
+    }
 
 });
 multiplier.addEventListener('click',function(){
@@ -75,8 +78,13 @@ multiplier.addEventListener('click',function(){
         plus.classList.remove('active');
         symbols.push(2);
     }
+    if(val==0){
+        val=1;
+    }
+    else {
+        val=2;
+    }
     
-    val=1;
 });
 negative.addEventListener('click',function(){
     this.classList.add('active');
@@ -86,7 +94,12 @@ negative.addEventListener('click',function(){
         plus.classList.remove('active');
         symbols.push(3);
     }
-    val=1;
+    if(val==0){
+        val=1;
+    }
+    else {
+        val=2;
+    }
 });
 plus.addEventListener('click',function(){
     this.classList.add('active');
@@ -96,7 +109,12 @@ plus.addEventListener('click',function(){
         divider.classList.remove('active');
         symbols.push(4);
     }
-    val=1;
+    if(val==0){
+        val=1;
+    }
+    else {
+        val=2;
+    }
 });
 
 
@@ -116,7 +134,7 @@ function catcher(){
       }
       screenSpan.innerText=cal1;
     }
-    else if(val>=1){
+    else if(val==1){
         var cal2='';
         digit2.push(this.value);
         if(digit2.length>=1){
@@ -131,10 +149,27 @@ function catcher(){
           }
           screenSpan.innerText=numb2;
     }
+    else if(val==2){
+        
+        numb=resultado;
+        var cal3='';
+        digit3.push(this.value);
+        if(digit3.length>=1){
+            deleter.innerText='C'; 
+        }
+        
+        for(let i=0; i<digit3.length; i++) {
+            cal3=cal3+digit3[i];
+            cal3*=1;
+            numb2=cal3;            
+            
+          }
+          screenSpan.innerText=numb2;
+    }
+    
 }
 
 
-console.log('val '+val+ ' numb '+ numb +' numb2 '+ numb2 + ' resultado '+ resultado );
 
 function operation(){
     
@@ -147,59 +182,54 @@ function operation(){
         numb=numb/100;
         screenSpan.innerText=numb;
     }
-    else if(symbols.includes(1)==true){
+    else if(symbols.includes(1)===true){
        
         resultado=numb/numb2; 
         screenSpan.innerText=resultado
-        
-        resultado=numb;
+  
         digits=[]
         digit2=[];
+        digit3=[];
         symbols=[];
-        val=1;
+        val=2;
     }
-    else if(symbols.includes(2)==true){
+    else if(symbols.includes(2)===true){
         resultado=numb*numb2;
         screenSpan.innerText=resultado
-        
-        resultado=numb;
-        digits=[]
+
+        digits=[];
         digit2=[];
+        digit3=[];
         symbols=[];
-        val=1;
+        val=2;
     }
-    else if(symbols.includes(3)==true){
+    else if(symbols.includes(3)===true){
         resultado=numb-numb2;
         screenSpan.innerText=resultado
-        
-        resultado=numb;
+
+        digits=[];
+        digit2=[];
+        digit3=[];
+        symbols=[];
+        val=2;
+    }
+    else if(symbols.includes(4)===true){
+        resultado=numb+numb2;
+        screenSpan.innerText=resultado;
 
         digits=[]
         digit2=[];
+        digit3=[];
         symbols=[];
-        val=1;
+        val=2;
     }
-    else if(symbols.includes(4)==true){
-        resultado=numb+numb2;
-        screenSpan.innerText=resultado;
-        
-        resultado=numb;
-        if(resultado==numb && symbols.includes(4)==true){
-           resultado=resultado+numb2; 
-           screenSpan.innerText=resultado;
-        }
-        digits=[]
-        digit2=[];
-        symbols=[];
-        val=1;
-    }
-    console.log('val '+val+ ' numb '+ numb +' numb2 '+ numb2 + ' resultado '+ resultado );
 }
 
 function borrador(){
     deleter.innerText='C';
     digits=[];
     digit2=[];
+    digit3=[];
     symbols=[];
     val=0;
     screenSpan.innerText='0';
