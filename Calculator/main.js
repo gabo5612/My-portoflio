@@ -1,10 +1,3 @@
-/* 
-    falta poder agregar comas a los digitos 
-    poner que cuando el digito tenga muchos decimales, limitarlo a 4 decimales
-    */
-
-  
-
 const screenSpan=document.querySelector('#screenSpan');
 const  deleter=document.getElementById('delete');
 const  valor=document.getElementById('valor');
@@ -38,7 +31,6 @@ var numb2=0;
 deleter.addEventListener('click',borrador);
 valor.addEventListener('click',operation);
 percentage.addEventListener('click',operation);
-
 seven.addEventListener('click',catcher);
 eight.addEventListener('click',catcher);
 nine.addEventListener('click',catcher);
@@ -48,9 +40,8 @@ six.addEventListener('click',catcher);
 one.addEventListener('click',catcher);
 two.addEventListener('click',catcher);
 three.addEventListener('click',catcher);
-
 zero.addEventListener('click',catcher);
-comma.addEventListener('click',catcher); /* no se te olvide lo de la coma*/
+comma.addEventListener('click',catcher); 
 equal.addEventListener('click',operation); 
 
 divider.addEventListener('click',function(){
@@ -117,22 +108,29 @@ plus.addEventListener('click',function(){
     }
 });
 
-
 function catcher(){
     if (val==0){   
     var cal1='';
+    
     digits.push(this.value);
     if(digits.length>=1){
         deleter.innerText='C'; 
     }
+    if(digits.length>9){
+        digits.pop();
+    }
     
     for(let i=0; i<digits.length; i++) {
         cal1=cal1+digits[i];
+        
         cal1*=1;
+        
         numb=cal1;
-
+        print1=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 6 }).format(numb)
+        
       }
-      screenSpan.innerText=cal1;
+      screenSpan.innerText=print1;
+      
     }
     else if(val==1){
         var cal2='';
@@ -140,14 +138,18 @@ function catcher(){
         if(digit2.length>=1){
             deleter.innerText='C'; 
         }
-        
+        if(digit2.length>9){
+            digit2.pop();
+        }
         for(let i=0; i<digit2.length; i++) {
             cal2=cal2+digit2[i];
             cal2*=1;
-            numb2=cal2;            
-    
+            numb2=cal2;  
+            print2=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 6 }).format(numb2)    
+           
           }
-          screenSpan.innerText=numb2;
+          screenSpan.innerText=print2;
+         
     }
     else if(val==2){
         
@@ -157,36 +159,45 @@ function catcher(){
         if(digit3.length>=1){
             deleter.innerText='C'; 
         }
+        if(digit3.length>9){
+            digit3.pop();
+        }
         
         for(let i=0; i<digit3.length; i++) {
             cal3=cal3+digit3[i];
             cal3*=1;
-            numb2=cal3;            
-            
+            numb2=cal3;
+                  
+            print3=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 6 }).format(numb2)
           }
-          screenSpan.innerText=numb2;
+          screenSpan.innerText=print3;
+          
+          
     }
     
 }
-
-
 
 function operation(){
     
     if(this.value==='csymbol'){
         numb=numb*-1
-        screenSpan.innerText=numb;
+        printe=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 4 }).format(numb)
+        screenSpan.innerText=printe;
         
     }
     else if(this.value==='%'){
         numb=numb/100;
-        screenSpan.innerText=numb;
+        printe=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 4 }).format(numb)
+        screenSpan.innerText=printe;
+       
     }
     else if(symbols.includes(1)===true){
        
         resultado=numb/numb2; 
-        screenSpan.innerText=resultado
-  
+        resultado=resultado.toPrecision(6);
+        printe=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 4 }).format(resultado)
+        screenSpan.innerText=printe
+        
         digits=[]
         digit2=[];
         digit3=[];
@@ -195,8 +206,9 @@ function operation(){
     }
     else if(symbols.includes(2)===true){
         resultado=numb*numb2;
-        screenSpan.innerText=resultado
-
+        resultado=resultado.toPrecision(6);
+        printe=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 4 }).format(resultado)
+        screenSpan.innerText=printe
         digits=[];
         digit2=[];
         digit3=[];
@@ -205,7 +217,8 @@ function operation(){
     }
     else if(symbols.includes(3)===true){
         resultado=numb-numb2;
-        screenSpan.innerText=resultado
+        printe=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 4 }).format(resultado)
+        screenSpan.innerText=printe
 
         digits=[];
         digit2=[];
@@ -215,7 +228,8 @@ function operation(){
     }
     else if(symbols.includes(4)===true){
         resultado=numb+numb2;
-        screenSpan.innerText=resultado;
+        printe=new Intl.NumberFormat('de-DE', { maximumSignificantDigits: 4 }).format(resultado)
+        screenSpan.innerText=printe;
 
         digits=[]
         digit2=[];
