@@ -184,8 +184,17 @@ nav ul{
   object-fit: cover;
   cursor: pointer;
   border-radius: 12px;
-  filter: blur(2px);
+  filter: blur(4px);
+  transition: all 0.4s ease-out;
+  transition-delay: 0.25s;
+
+
   
+}
+.proyect-img img:hover{
+  filter: blur(0px);
+  transition-delay: 0.1s;
+  transition: all 0.1s ease-out;
 }
 footer{
   height: 50vh;
