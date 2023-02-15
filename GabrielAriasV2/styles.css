@@ -184,6 +184,8 @@ nav ul{
   object-fit: cover;
   cursor: pointer;
   border-radius: 12px;
+  filter: blur(2px);
+  
 }
 footer{
   height: 50vh;

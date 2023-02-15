@@ -28,6 +28,7 @@ var numb=0;
 var numb2=0;
 
 
+
 deleter.addEventListener('click',borrador);
 valor.addEventListener('click',operation);
 percentage.addEventListener('click',operation);
@@ -57,6 +58,7 @@ divider.addEventListener('click',function(){
     }
     else {
         val=2;
+        console.log(val)
     }
 
 });
@@ -74,6 +76,7 @@ multiplier.addEventListener('click',function(){
     }
     else {
         val=2;
+        console.log(val);
     }
     
 });
@@ -268,3 +271,8 @@ function borrador(){
 
 
 
+const conteo=(a) => {
+    if (a<0) return
+    console.log(a);
+    return conteo(a-1)
+}
