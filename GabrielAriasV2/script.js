@@ -15,7 +15,7 @@ const wordpres=document.querySelector('#wordpress')
     toggleTheme.addEventListener("click", () => {
         document.body.classList.toggle("lightMode")
         if (document.body.classList.contains("lightMode")){
-            toggleTheme.src='./assets/flash.svg' 
+            toggleTheme.src='./assets/dark_mode.svg' 
             toggleTheme.classList.remove('filter')
             git.classList.remove('filter')
             front.classList.remove('filter')
@@ -30,7 +30,7 @@ const wordpres=document.querySelector('#wordpress')
             wordpres.style.filter='none'
 
         } else  {
-            toggleTheme.src='./assets/flash-outline.svg' 
+            toggleTheme.src='./assets/light_mode.svg' 
             toggleTheme.classList.add('filter')
             git.classList.add('filter')
             front.classList.add('filter')
