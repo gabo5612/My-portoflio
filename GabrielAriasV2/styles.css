@@ -286,6 +286,7 @@ footer{
   }
   .nav-content{
     flex-direction: row;
+    margin: 0 5px;
   }
   .nav-content-right img {
     width: 500px;
