@@ -37,12 +37,13 @@ footer, header, hgroup, menu, nav, section {
   --Background: #d1d1d1;
   --Text:  #141414;
   --Footer: #8d8d8d;
+  transition: all 1s ease-out;
 }
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--Text);
   background-color: var(--Background);
-  
+  transition: all 1s ease-out;
 }
 header{
   height: 100vh;
