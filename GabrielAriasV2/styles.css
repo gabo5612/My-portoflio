@@ -61,10 +61,10 @@ nav ul{
 }
 
 
+
 .nav-icon{
   width: 25px;
-  
-  margin: 0 10px;
+  padding: 0 7px;
 }
 .filter{
   filter: invert(1);
@@ -75,6 +75,7 @@ nav ul{
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
+  margin: 0 15px;
 }
 .nav-content-right{
   display: flex;
@@ -193,7 +194,7 @@ nav ul{
   object-fit: cover;
   cursor: pointer;
   border-radius: 12px;
-  filter: blur(4px);
+  
   transition: all 0.4s ease-out;
   transition-delay: 0.25s;
 
@@ -275,6 +276,9 @@ footer{
   nav{
     justify-content: space-between;
   }
+  .nav-icon{
+    margin-left:  18px;
+  }
   .nav-content{
     flex-direction: row;
   }
@@ -305,6 +309,7 @@ footer{
   .proyect-img img{
     height: 400px;
     width: 400px;
+    filter: blur(4px);
   }
   .proyect3, .proyect4{
     grid-row: span 2;
