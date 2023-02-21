@@ -26,19 +26,22 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 :root{
-  --DarkModeBackground: #141414;
-  --DarkModeText:  #d1d1d1;
-  --DarkFooter: #383838;
+  --Background: #141414;
+  --Text:  #d1d1d1;
+  --Footer: #383838;
   --underTextColor:#87C988;
 
-  --LightModeBackground: #d1d1d1;
-  --LightModeText:  #141414;
-  --LightFooter: #656565;
+  
+}
+.lightMode{
+  --Background: #d1d1d1;
+  --Text:  #141414;
+  --Footer: #656565;
 }
 body {
   font-family: 'Poppins', sans-serif;
-  color: var(--DarkModeText);
-  background-color: var(--DarkModeBackground);
+  color: var(--Text);
+  background-color: var(--Background);
   
 }
 header{
@@ -60,8 +63,11 @@ nav ul{
 
 .nav-icon{
   width: 25px;
-  filter: invert(1);
+  
   margin: 0 10px;
+}
+.filter{
+  filter: invert(1);
 }
 
 
@@ -77,8 +83,11 @@ nav ul{
 .nav-content-right img{
   margin-top: 12px;
   width: 200px;
-  filter:grayscale(1);
+  
   border-radius: 12px;
+}
+.filterImg{
+  filter:grayscale(1);
 }
 .nav-content-left{
   display: flex;
@@ -103,7 +112,7 @@ nav ul{
 }
 .contact-me{
   text-decoration: none;
-  color: var(--DarkModeText);
+  color: var(--Text);
   border-bottom: 1px solid var(--underTextColor);
   font-weight: 200;
   transition: all 1s ease-out;
@@ -202,7 +211,7 @@ footer{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--DarkFooter);
+  background-color: var(--Footer);
 }
 .footer-icons ul{
   list-style: none;
@@ -236,7 +245,7 @@ footer{
   border-radius: 12px;
   padding: 4px 0;
   background-color: rgba(240, 248, 255, 0.07);
-  color: var(--DarkModeText);
+  color: var(--Text);
   font-weight: 300;
 }
 .form input:hover{
