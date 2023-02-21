@@ -66,6 +66,10 @@ nav ul{
   width: 25px;
   padding: 0 7px;
 }
+#darkModeIcon{
+  width: 30px;
+  padding: 0 3px;
+}
 .filter{
   filter: invert(1);
 }
@@ -75,7 +79,7 @@ nav ul{
   display: flex;
   justify-content: space-between;
   flex-direction: column-reverse;
-  margin: 0 15px;
+  margin: 0 5px;
 }
 .nav-content-right{
   display: flex;
