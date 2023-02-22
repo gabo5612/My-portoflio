@@ -1,7 +1,4 @@
 # My-portoflio
-GitHub Profile README Generator
-Star this repo13332
-Fork on GitHub3489
 <h1 align="center">Hi 👋, I'm Gabriel Arias</h1>
 <h3 align="center">A passionate frontend developer from Venezuela</h3>
 
