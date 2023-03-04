@@ -77,3 +77,8 @@
    border-radius: 12px;
    padding: 5px 0;
 }
+@media (min-width:1400px){
+    .SkillList{
+        margin: 0 20px;
+    }
+}

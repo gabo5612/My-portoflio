@@ -19,3 +19,8 @@
     background: rgba(121, 87, 255, 0.802);
     background: linear-gradient(180deg, rgb(121, 87, 255) 0%, rgb(46, 43, 233) 100%); 
 }
+@media (min-width:1400px){
+    .Button button{
+        padding: 18px 110px;  
+    }
+}

@@ -9,6 +9,12 @@
     background: linear-gradient(180deg, rgb(121, 87, 255) 0%, rgb(46, 43, 233) 100%); 
 }
 
-@media (width:1400px){
-    
+@media (min-width:1400px){
+    .LeftSide{
+        height: 50vh;
+        width: 20vw;
+        border-radius: 40px ;
+        z-index: 1;
+        justify-content: center;
+    }
 }
