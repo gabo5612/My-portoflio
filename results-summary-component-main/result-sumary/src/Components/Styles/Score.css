@@ -1,0 +1,21 @@
+.Score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background: rgba(36, 33, 202, 0.557);
+    background: linear-gradient(0deg, rgba(36, 33, 202, 0.048) 0%, rgba(78,33,202,1) 100%); 
+    border-radius: 100%;
+    margin-top: 10px;
+}
+.totalScore{
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+    
+}
+.Scoreofhundred{
+    color: hsla(241, 100%, 89%, 0.429);
+}

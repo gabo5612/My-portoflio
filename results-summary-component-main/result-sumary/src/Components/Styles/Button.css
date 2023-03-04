@@ -1,0 +1,21 @@
+.Button{
+    display: flex;
+    justify-content: center;
+
+}
+.Button button{
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    padding: 18px 150px;
+    border-radius: 30px;
+    transition: 0.8s;
+    margin-top: 10px;
+}
+.Button button:hover{
+    transition: 0.8s;
+    background: rgba(121, 87, 255, 0.802);
+    background: linear-gradient(180deg, rgb(121, 87, 255) 0%, rgb(46, 43, 233) 100%); 
+}

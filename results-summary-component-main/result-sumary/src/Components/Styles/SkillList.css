@@ -1,0 +1,79 @@
+.SkillList{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.LefttSideSkills{
+    display: flex;
+    align-items: center;
+}
+.LefttSideSkills img{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+.LefttSideSkills{
+    font-weight: 700;
+}
+.RightSideSkills p{
+    margin-right: 10px;
+    font-weight: 700;
+    
+}
+.RightSideSkills p:first-child{
+    font-weight: 800;
+}
+.RightSideSkills p:last-child{
+    color: hsl(240, 17%, 57%);
+}
+.RightSideSkills{
+    display: flex;
+    align-items: center;
+}
+.Reaction{
+    display: flex;
+   background-color: hsla(0, 100%, 67%, 0.064);
+   justify-content: space-between;
+   margin: 20px 25px;
+   border-radius: 12px;
+   padding: 5px 0;
+}
+.reactP{
+    color: hsl(0, 100%, 67%);
+}
+.memoryP{
+    color: hsl(39, 100%, 56%);
+}
+.verbalP{
+    color:hsl(166, 100%, 37%)
+}
+.visualP{
+    color: hsl(234, 85%, 45%);
+}
+.Memory{
+    display: flex;
+   background-color: hsla(39, 100%, 56%, 0.064);
+   justify-content: space-between;
+   margin: 20px 25px;
+   border-radius: 12px;
+   padding: 5px 0;
+}
+
+.Verbal{
+    display: flex;
+   background-color: hsla(166, 100%, 37%, 0.064);
+   justify-content: space-between;
+   margin: 20px 25px;
+   border-radius: 12px;
+   padding: 5px 0;
+}
+
+.Visual{
+    display: flex;
+   background-color: hsla(234, 85%, 45%, 0.064);
+   justify-content: space-between;
+   margin: 20px 25px;
+   border-radius: 12px;
+   padding: 5px 0;
+}

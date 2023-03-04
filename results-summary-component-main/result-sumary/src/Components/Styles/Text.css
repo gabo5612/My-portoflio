@@ -1,0 +1,9 @@
+.Text{
+    width: 300px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+}
+.Text p{
+    color: hsl(241, 100%, 89%);
+}

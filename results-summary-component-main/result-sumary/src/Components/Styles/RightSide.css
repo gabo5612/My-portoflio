@@ -1,0 +1,9 @@
+
+.RightSide h3{
+    margin-left: 30px;
+}
+@media (min-width:800px){
+    .RightSide{
+        background-color: white;
+    }
+}
